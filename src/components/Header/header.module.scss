@@ -1,0 +1,119 @@
+@use '../../scss/abstracts/' as a;
+
+.header {
+
+  padding: 24px 0;
+
+  &__content {
+    @include a.flex($justify: space-between);
+  }
+
+  &__navWrapper {
+    @include a.flex($align: center, $gap: 60px);
+  }
+
+  // &__logoLink {}
+
+  &__nav {
+
+    display: none;
+
+    @include a.laptop {
+      @include a.flex($gap: 25px);
+    }
+  }
+
+  &__navLink {
+    color: a.$color-light;
+
+    font-family: a.$font-main;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: uppercase;
+
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: a.$color-accent;
+    }
+  }
+
+
+
+  &__utility {
+    @include a.flex($align: center, $gap: 20px);
+
+  }
+
+  &__phone {
+    color: a.$color-light;
+
+    font-family: a.$font-main;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: uppercase;
+
+    padding: 14px 28px 14px 28px;
+    border: 1px solid a.$color-light-low;
+    border-radius: 15px;
+
+    transition: border 0.3s ease-in-out;
+
+    display: none;
+
+    @include a.laptop {
+      display: block;
+    }
+
+    &:hover {
+      border: 1px solid a.$color-accent;
+    }
+  }
+
+
+
+  &__social {
+
+
+    display: none;
+
+    @include a.tablet {
+      @include a.flex($gap: 12px);
+    }
+  }
+
+  // &__socialLink {}
+
+  &__burgerMenu {
+    @include a.laptop {
+      display: none;
+    }
+  }
+}
+
+
+
+
+.socIcon {
+  box-sizing: border-box;
+  border: 1px solid a.$color-light-low;
+  border-radius: 15px;
+  background: a.$color-light-low;
+  padding: 8px;
+  width: 44px;
+  height: 44px;
+
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background-color: transparent;
+    border: 1px solid a.$color-accent;
+  }
+}

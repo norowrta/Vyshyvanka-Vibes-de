@@ -1,0 +1,106 @@
+.header {
+  padding: 24px 0;
+}
+.header__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 0;
+}
+.header__navWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 60px;
+}
+.header__nav {
+  display: none;
+}
+@media (min-width: 1280px) {
+  .header__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 25px;
+  }
+}
+.header__navLink {
+  color: #fcf9f9;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: uppercase;
+  transition: color 0.3s ease-in-out;
+}
+.header__navLink:hover {
+  color: #ecd979;
+}
+.header__utility {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+.header__phone {
+  color: #fcf9f9;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: uppercase;
+  padding: 14px 28px 14px 28px;
+  border: 1px solid rgba(252, 249, 249, 0.1);
+  border-radius: 15px;
+  transition: border 0.3s ease-in-out;
+  display: none;
+}
+@media (min-width: 1280px) {
+  .header__phone {
+    display: block;
+  }
+}
+.header__phone:hover {
+  border: 1px solid #ecd979;
+}
+.header__social {
+  display: none;
+}
+@media (min-width: 768px) {
+  .header__social {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .header__burgerMenu {
+    display: none;
+  }
+}
+
+.socIcon {
+  box-sizing: border-box;
+  border: 1px solid rgba(252, 249, 249, 0.1);
+  border-radius: 15px;
+  background: rgba(252, 249, 249, 0.1);
+  padding: 8px;
+  width: 44px;
+  height: 44px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+.socIcon:hover {
+  background-color: transparent;
+  border: 1px solid #ecd979;
+}/*# sourceMappingURL=header.module.css.map */

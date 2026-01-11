@@ -1,0 +1,147 @@
+@use '../../scss/abstracts/' as a;
+
+.hero {
+
+  padding: 60px 0 40px 0;
+
+  @include a.tablet {
+    padding: 76px 0 50px 0;
+  }
+
+  @include a.laptop {
+    padding: 76px 0 75px 0;
+  }
+
+  &__content {
+    @include a.flex($direction: column, $align: center, $gap: 40px);
+
+    @include a.tablet {
+      @include a.flex($direction: column, $gap: 46px);
+    }
+
+    @include a.laptop {
+      @include a.flex($gap: 40px, $align: center);
+    }
+  }
+
+  &__main {
+    @include a.flex($direction: column, $align: center, $gap: 20px);
+    order: 1;
+
+    @include a.tablet {
+      @include a.flex($direction: column, $align: center, $gap: 40px);
+      width: 549px;
+
+    }
+
+    @include a.laptop {
+      width: 518px;
+      order: 2;
+    }
+
+    @include a.desktop {
+      width: 632px;
+    }
+  }
+
+  &__img {
+    display: block;
+    height: auto;
+    width: 100%;
+
+    order: 2;
+    height: 545px;
+    border-radius: 4px;
+    object-fit: cover;
+
+    @include a.tablet {
+      width: 413px;
+    }
+
+    @include a.laptop {
+      width: 392px;
+    }
+
+
+  }
+
+  &__title {
+    font-family: a.$font-main;
+    font-style: Regular;
+    font-size: 44px;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: -3%;
+    text-align: left;
+
+    color: a.$color-light;
+    text-wrap: pretty;
+
+    @include a.tablet {
+      font-size: 54px;
+      line-height: 64px;
+    }
+
+    @include a.desktop {
+      font-size: 64px;
+      line-height: 74px;
+    }
+  }
+
+  &__titleHighlighted {
+    color: a.$color-accent;
+  }
+
+  &__btnOrder {
+    color: a.$color-light;
+
+    font-family: a.$font-main;
+    font-style: SemiBold;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 19px;
+    letter-spacing: -4%;
+    text-align: left;
+    text-transform: uppercase;
+
+    cursor: pointer;
+    padding: 14px 36px;
+    border: 1px solid a.$color-light-low;
+    border-radius: 15px;
+
+    @include a.flex($align: center, $gap: 10px);
+
+    transition: border 0.3s ease;
+
+    @include a.tablet {
+      padding: 14px 39px;
+
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    &:hover {
+      border: 1px solid a.$color-accent;
+
+      &[data-aos] {
+        transition: border 0.3s ease !important;
+      }
+
+      .hero__btnArow {
+        transform: rotate(-30deg);
+      }
+    }
+  }
+
+
+
+  &__btnArow {
+    width: 26px;
+    height: 10px;
+
+
+    transition: transform 0.3s ease;
+  }
+
+
+}

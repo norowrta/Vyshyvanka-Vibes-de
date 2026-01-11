@@ -1,0 +1,131 @@
+@use '../../scss/abstracts/' as a;
+
+.about {
+
+  padding: 40px 0 80px 0;
+  overflow: hidden;
+
+  @include a.tablet {
+    padding: 50px 0 100px;
+  }
+
+  @include a.laptop {
+    padding: 75px 0 150px 0;
+  }
+
+
+  &__content {
+    @include a.flex($direction: column, $align: center, $gap: 50px);
+
+    @include a.tablet {
+      @include a.flex($direction: column, $align: center, $gap: 40px);
+    }
+
+    @include a.laptop {
+      @include a.flex($align: center, $gap: 50px);
+    }
+  }
+
+  &__main {
+    @include a.flex($direction: column, $gap: 40px);
+  }
+
+  &__title {
+    color: a.$color-light;
+
+    font-family: a.$font-main;
+    font-style: Medium;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 44px;
+    letter-spacing: -3%;
+    text-align: left;
+
+    @include a.tablet {
+      font-size: 44px;
+      line-height: 64px;
+    }
+  }
+
+  &__txtBlock {
+    @include a.flex($direction: column, $gap: 20px);
+
+    @include a.laptop {
+      width: 536px;
+    }
+
+    @include a.desktop {
+      width: 481px;
+    }
+
+  }
+
+  &__txt {
+    color: a.$color-light-medium;
+
+    font-family: a.$font-main;
+    font-style: Regular;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: -4%;
+    text-align: left;
+
+    @include a.tablet {
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    text-wrap: pretty;
+  }
+
+  &__imageBlock {
+    display: block;
+    width: 100%;
+  }
+
+
+  &__visual {
+    position: relative;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+
+
+  }
+
+  &__bgWrapper {
+    position: absolute;
+    bottom: -62px;
+    right: -229px;
+
+    @include a.tablet {
+      bottom: -50px;
+      right: -208px;
+    }
+
+    @include a.laptop {
+      bottom: -80px;
+      right: -210px;
+    }
+
+    @include a.desktop {
+      bottom: -80px;
+      right: -100px;
+    }
+  }
+
+  &__bg {
+    width: 459px;
+    height: 408px;
+
+    @include a.tablet {
+      width: 545px;
+      height: 484px;
+    }
+  }
+}

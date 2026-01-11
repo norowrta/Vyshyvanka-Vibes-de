@@ -1,0 +1,125 @@
+.footer {
+  position: relative;
+  padding: 40px 0 280px 0;
+  border-top: 1px solid rgba(252, 249, 249, 0.1);
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .footer {
+    padding: 40px 0;
+  }
+}
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 40px;
+}
+.footer__nav {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  grid-auto-flow: column;
+  gap: 25px 40px;
+  justify-items: start;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media (min-width: 768px) {
+  .footer__nav {
+    gap: 25px;
+    grid-auto-flow: row;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(4, auto);
+  }
+}
+.footer__navLink {
+  color: #fcf9f9;
+  font-family: "Manrope", sans-serif;
+  font-style: Regular;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+.footer__navLink:hover {
+  color: #ecd979;
+}
+.footer__navLink:hover[data-aos] {
+  transition: color 0.3s ease !important;
+}
+.footer__title {
+  color: #fcf9f9;
+  font-family: "Manrope", sans-serif;
+  font-style: Regular;
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 54px;
+  letter-spacing: -3%;
+  text-align: left;
+  text-wrap: pretty;
+}
+@media (min-width: 768px) {
+  .footer__title {
+    font-size: 54px;
+    line-height: 64px;
+    max-width: 521px;
+  }
+}
+@media (min-width: 1280px) {
+  .footer__title {
+    font-size: 64px;
+    line-height: 74px;
+    max-width: none;
+  }
+}
+.footer__titleHighlighted {
+  color: #ecd979;
+}
+.footer__bgWrapper {
+  position: absolute;
+  z-index: -1;
+  bottom: -201px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (min-width: 768px) {
+  .footer__bgWrapper {
+    right: -278px;
+    top: -14px;
+    left: auto;
+    transform: none;
+  }
+}
+@media (min-width: 1280px) {
+  .footer__bgWrapper {
+    right: -259px;
+    top: -61px;
+  }
+}
+@media (min-width: 1440px) {
+  .footer__bgWrapper {
+    right: -99px;
+    top: -61px;
+  }
+}
+.footer__bg {
+  shape-rendering: crispEdges;
+  width: 450px;
+  height: 400px;
+}
+@media (min-width: 768px) {
+  .footer__bg {
+    width: 452px;
+    height: 401px;
+  }
+}
+@media (min-width: 1280px) {
+  .footer__bg {
+    width: 595px;
+    height: 528px;
+  }
+}/*# sourceMappingURL=footer.module.css.map */

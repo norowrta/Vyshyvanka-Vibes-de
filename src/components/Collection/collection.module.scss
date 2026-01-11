@@ -1,0 +1,211 @@
+@use '../../scss/abstracts/' as a;
+
+.collection {
+  overflow: hidden;
+
+  padding-bottom: 40px;
+
+  @include a.tablet {
+    padding-bottom: 50px;
+  }
+
+  @include a.laptop {
+    padding-bottom: 75px;
+  }
+
+  &__content {
+    @include a.flex($direction: column, $align: center, $gap: 40px);
+    padding-bottom: 60px;
+
+    @include a.tablet {
+      padding-bottom: 80px;
+    }
+
+    @include a.laptop {
+      padding-bottom: 130px;
+    }
+  }
+
+  &__title {
+
+    color: a.$color-light;
+
+    font-family: a.$font-main;
+    font-style: Medium;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 44px;
+    letter-spacing: -3%;
+
+    @include a.tablet {
+      font-size: 44px;
+      line-height: 64px;
+    }
+
+  }
+
+  &__main {
+    min-width: 0;
+    width: 100%;
+    position: relative;
+  }
+
+
+  &__slider {
+    padding-bottom: 20px !important;
+
+    :global(.swiper-pagination) {
+      bottom: 0 !important;
+    }
+
+    :global(.swiper-pagination-bullet) {
+      background-color: a.$color-light-medium;
+      transform: scale(1) !important;
+      vertical-align: middle;
+      width: 4px;
+      height: 4px;
+    }
+
+    :global(.swiper-pagination-bullet-active-prev),
+    :global(.swiper-pagination-bullet-active-next) {
+      transform: scale(1) !important;
+      width: 8px;
+      height: 8px;
+    }
+
+    :global(.swiper-pagination-bullet-active) {
+      background-color: a.$color-accent;
+      transform: scale(1) !important;
+      width: 10px;
+      height: 10px;
+    }
+  }
+
+  &__item {
+    cursor: grab;
+
+    &:active {
+      cursor: grabbing;
+    }
+  }
+
+
+  &__itemWrapper {
+    @include a.flex($direction: column, $gap: 18px);
+  }
+
+  &__itemImg {
+    display: block;
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+
+    border-radius: 4px;
+
+    @include a.tablet {
+      width: 342px;
+    }
+
+    @include a.laptop {
+      width: 380px;
+    }
+
+    @include a.desktop {
+      width: 400px;
+    }
+  }
+
+  &__itemInfo {
+    @include a.flex($direction: column, $gap: 8px);
+  }
+
+  &__itemTitle {
+    color: a.$color-light;
+
+    font-family: a.$font-main;
+    font-style: Medium;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 14px;
+    letter-spacing: 5%;
+    text-align: left;
+    text-transform: uppercase;
+
+    @include a.tablet {
+      font-size: 18px;
+      line-height: 18px;
+    }
+  }
+
+  &__itemPrice {
+    color: a.$color-light-medium;
+
+    font-family: a.$font-main;
+    font-style: Regular;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 5%;
+    text-align: left;
+
+    @include a.tablet {
+      font-size: 18px;
+      line-height: 18px;
+
+    }
+  }
+
+
+
+  &__img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: top center;
+
+    display: block;
+
+    @include a.tablet {
+      height: 776px;
+    }
+
+    @media (min-width: 1441px) {
+      max-width: 1440px;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+
+  &__bgWrapper {
+    position: absolute;
+    z-index: -1;
+
+    left: -147px;
+    bottom: 102px;
+
+    @include a.tablet {
+      left: -256px;
+      bottom: 95px;
+    }
+
+    @include a.laptop {
+      left: -219px;
+    }
+
+    @include a.desktop {
+      left: -269px;
+    }
+  }
+
+  &__bg {
+    shape-rendering: crispEdges;
+
+    width: 199px;
+    height: 177px;
+
+    @include a.tablet {
+      width: 338px;
+      height: 300px;
+    }
+  }
+}

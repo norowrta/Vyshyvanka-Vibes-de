@@ -1,0 +1,133 @@
+@use '../../scss/abstracts/' as a;
+
+.footer {
+  position: relative;
+
+  padding: 40px 0 280px 0;
+  border-top: 1px solid a.$color-light-low;
+  overflow: hidden;
+
+  @include a.tablet {
+    padding: 40px 0;
+  }
+
+  &__content {
+    @include a.flex($direction: column, $gap: 40px);
+  }
+
+  &__nav {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-auto-flow: column;
+
+    gap: 25px 40px;
+    justify-items: start;
+    width: fit-content;
+
+    @include a.tablet {
+      gap: 25px;
+
+      grid-auto-flow: row;
+      grid-template-rows: auto;
+      grid-template-columns: repeat(4, auto);
+    }
+  }
+
+  &__navLink {
+
+    color: a.$color-light;
+
+    font-family: a.$font-main;
+    font-style: Regular;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: uppercase;
+
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: a.$color-accent;
+
+      &[data-aos] {
+        transition: color 0.3s ease !important;
+      }
+    }
+  }
+
+  &__title {
+    color: a.$color-light;
+
+    font-family: a.$font-main;
+    font-style: Regular;
+    font-size: 44px;
+    font-weight: 400;
+    line-height: 54px;
+    letter-spacing: -3%;
+    text-align: left;
+
+    text-wrap: pretty;
+
+    @include a.tablet {
+      font-size: 54px;
+      line-height: 64px;
+
+      max-width: 521px;
+    }
+
+    @include a.laptop {
+      font-size: 64px;
+      line-height: 74px;
+
+      max-width: none;
+    }
+  }
+
+  &__titleHighlighted {
+    color: a.$color-accent;
+  }
+
+  &__bgWrapper {
+    position: absolute;
+    z-index: -1;
+    bottom: -201px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include a.tablet {
+      right: -278px;
+      top: -14px;
+      left: auto;
+      transform: none;
+    }
+
+    @include a.laptop {
+      right: -259px;
+      top: -61px;
+    }
+
+    @include a.desktop {
+      right: -99px;
+      top: -61px;
+    }
+  }
+
+  &__bg {
+    shape-rendering: crispEdges;
+
+    width: 450px;
+    height: 400px;
+
+    @include a.tablet {
+      width: 452px;
+      height: 401px;
+    }
+
+    @include a.laptop {
+      width: 595px;
+      height: 528px;
+    }
+  }
+}

@@ -1,0 +1,110 @@
+@use '../../scss/abstracts/' as a;
+
+.testimonials {
+
+  padding: 37px 0 80px;
+
+  @include a.tablet {
+    padding: 50px 0 100px;
+  }
+
+  @include a.laptop {
+    padding: 75px 0 150px;
+  }
+
+
+  &__content {
+    @include a.flex($direction: column, $gap: 40px);
+  }
+
+  &__title {
+    color: a.$color-light;
+
+    font-family: a.$font-main;
+    font-style: Medium;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 44px;
+    letter-spacing: -3%;
+    text-align: left;
+
+    @include a.tablet {
+      font-size: 44px;
+      line-height: 64px;
+    }
+  }
+
+  // &__main {}
+
+  &__slider {
+    padding-top: 24px;
+  }
+
+  &__slide {
+    @include a.flex($direction: column, $align: center, $gap: 8px);
+    padding: 54px 18px 18px 18px;
+    border: 1px solid a.$color-light-low;
+    border-radius: 4px;
+
+    position: relative;
+    overflow: visible;
+
+    height: 243px + 24px;
+    cursor: default;
+
+    @include a.tablet {
+      height: 286px + 24px;
+    }
+
+    @include a.laptop {
+      height: 285px + 24px;
+    }
+
+    @include a.desktop {
+      height: 264px + 24px;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 64px;
+    height: 64px;
+    box-shadow: 0px 1px 4px 0px rgba(16, 24, 40, 0.06);
+  }
+
+  &__username {
+    color: a.$color-light;
+
+    font-family: a.$font-main;
+    font-style: SemiBold;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 0%;
+    text-align: center;
+  }
+
+  &__feedback {
+    color: a.$color-light-medium;
+
+    font-family: a.$font-main;
+    font-style: Regular;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0%;
+    text-align: center;
+
+    text-wrap: pretty;
+
+    @include a.tablet {
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+  }
+}
